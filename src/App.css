@@ -10,9 +10,14 @@ a:hover {text-decoration: underline; }
   --primary-background-color: #1d0e06;
   --secondary-background-color: #c8c4c1;
   --divider-color: #fca535;
+
+  --primary-font: Comic Sans MS, Comic Sans, cursive;
 }
 
-body { background-color: var(--secondary-background-color)}
+body { 
+  background-color: var(--secondary-background-color);
+  font-family: var(--primary-font);
+}
 
 #header {
   display: flex;
@@ -23,7 +28,7 @@ body { background-color: var(--secondary-background-color)}
   background-color: var(--primary-background-color);
   font-size: 1.2em;
   /*Set the font family of the text in the header to Arial*/
-  font-family: Arial; 
+  font-family: var(--primary-font);
   /*Set a bottom border of 1px*/
   border-bottom: 3px solid var(--divider-color);
   padding: 5px 40px;
