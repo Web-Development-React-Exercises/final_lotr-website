@@ -12,6 +12,7 @@ a:hover {text-decoration: underline; }
   --divider-color: #fca535;
 
   --primary-font: Comic Sans MS, Comic Sans, cursive;
+  --secondary-font: Arial, Helvetica, sans-serif;
 }
 
 body { 
