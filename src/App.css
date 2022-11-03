@@ -3,7 +3,7 @@ a:hover {text-decoration: underline; }
 
 
 :root {
-  --primary-color: #f8a100;
+  --primary-color: ;
   --secondary-color: ;
   --primary-text-color: #f8a100;
   --secondary-text-color: ;
@@ -19,14 +19,14 @@ body { background-color: var(--secondary-background-color)}
   flex-direction: row;
   /*Make header as wide as the page*/
   width: 100vw - 80px;
-  height: 70px;
+  height: 50px;
   background-color: var(--primary-background-color);
-  font-size: 1.4em;
+  font-size: 1.2em;
   /*Set the font family of the text in the header to Arial*/
   font-family: Arial; 
   /*Set a bottom border of 1px*/
   border-bottom: 3px solid var(--divider-color);
-  padding: 20px 40px;
+  padding: 5px 40px;
 }
 
 header > * {
