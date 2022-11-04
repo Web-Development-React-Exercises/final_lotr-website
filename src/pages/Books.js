@@ -25,7 +25,7 @@ export default function Books() {
             <Header />
             {books.map(book => {
                 var x =JSON.parse(JSON.stringify(book));
-                console.log("X");
+                console.log(x);
 
                 return <div>
                     <h1>{book.name}</h1>
