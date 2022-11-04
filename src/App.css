@@ -29,10 +29,10 @@ body {
   display: flex;
   flex-direction: row;
   /*Make header as wide as the page*/
-  width: 100vw - 80px;
+  width: auto;
   height: 50px;
   background-color: var(--primary-background-color);
-  font-size: 1.2em;
+  font-size: clamp(0.4rem, 1.4vw, 1.5rem);
   /*Set the font family of the text in the header to Arial*/
   font-family: var(--primary-font);
   /*Set a bottom border of 1px*/
