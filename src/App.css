@@ -25,6 +25,15 @@ body {
   font-family: var(--primary-font);
 }
 
+#notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  width: 100vw;
+}
+
 #header {
   display: flex;
   flex-direction: row;
