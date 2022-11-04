@@ -1,6 +1,10 @@
 a:link { text-decoration: none; }
 a:hover {text-decoration: underline; }
 
+@font-face {
+  font-family: 'Ringbearer';
+  src: url('./RingbearerMedium-51mgZ.ttf');
+}
 
 :root {
   --primary-color: ;
@@ -11,6 +15,7 @@ a:hover {text-decoration: underline; }
   --secondary-background-color: #c8c4c1;
   --divider-color: #fca535;
 
+  --title-font: 'Ringbearer';
   --primary-font: Comic Sans MS, Comic Sans, cursive;
   --secondary-font: Arial, Helvetica, sans-serif;
 }
