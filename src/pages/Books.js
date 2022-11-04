@@ -9,14 +9,16 @@ import getBookChapters from '../functions/getBookChapters';
 export default function Books() {
     const [books, setBooks] = useState([]);
 
-    useEffect(() => {
+    useEffect(async () => {
         //On page load, get all books from API
-        getBooks().then((data) => {
+        var booksArray = await getBooks().then((data) => {
             const response = data.docs
-            setBooks(response);
+            return response;
         }).catch((error) => {
             console.log(error);
         });
+
+        setBooks(data);
      
     }, []);
 
@@ -25,7 +27,7 @@ export default function Books() {
             <Header />
             {books.map(book => {
                 var x =JSON.parse(JSON.stringify(book));
-                console.log("X");
+                console.log(x);
 
                 return <div>
                     <h1>{book.name}</h1>
