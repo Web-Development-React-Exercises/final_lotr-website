@@ -8,6 +8,7 @@ import Characters from './pages/Characters';
 import Quotes from './pages/Quotes';
 import Chapters from './pages/Chapters';
 import About from './pages/About';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path="/quotes" element={<Quotes />} />
       <Route path="/chapters" element={<Chapters />} />
       <Route path="/about" element={<About />} />
+      <Route path="/*" element={<NotFound />} />
     </Routes>
   );
 }
