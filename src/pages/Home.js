@@ -6,7 +6,10 @@ export default function Home() {
     return (
         <div>
             <Header />
-            <h1>Home</h1>
+            <div className="main">
+                <h1 className="title">Welcome</h1>
+                <p className="mainText">Please use any of the available tools above</p>
+            </div>
         </div>
     );
 }

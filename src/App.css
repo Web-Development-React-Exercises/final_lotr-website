@@ -79,8 +79,31 @@ header > * {
 
 .main {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: center;
   margin: 5vh 5vw;
+}
+
+.title{
+  font-family: var(--title-font);
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  text-align: center;
+  color: var(--primary-background-color);
+  margin: 0 0 20px;
+}
+
+.mainText {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-background-color);
+  margin: 0 0 20px;
+}
+
+.titleChapterContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
 }
 
 .titles {
@@ -107,13 +130,11 @@ header > * {
 
   background-color: var(--primary-background-color);
   border: 3px solid var(--divider-color);
-  width: 30vw;
+  width: 28vw;
   padding: 2vw;
   color: var(--primary-text-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  margin: 0 20px;
 }
