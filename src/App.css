@@ -152,3 +152,30 @@ header>* {
   justify-content: center;
   align-items: center;
 }
+
+.movies{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+.movieContainer {
+  background-color: var(--primary-background-color);
+  border: 3px solid var(--divider-color);
+  width: 30vw;
+  padding: 2vw;
+  font-size: clamp(0.5rem, 1.5vw, 1.5rem);
+  color: var(--primary-text-color);
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.movieContainer > p {
+  margin: 5px;
+}
