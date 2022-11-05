@@ -70,7 +70,7 @@ export default function Quotes() {
                         </div>
                         <div className="buttonContainer">
                             <button className="styledButton" onClick={() => setRandomQuote()} >Get a quote</button>
-                            <button className="styledButton" onClick={() => { navigator.clipboard.writeText(displayedQuote) }}>Copy text</button>
+                            <button className="styledButton" onClick={() => { navigator.clipboard.writeText(displayedQuote.dialog) }}>Copy text</button>
                         </div>
                     </div>
                 }
