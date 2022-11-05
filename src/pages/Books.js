@@ -10,25 +10,39 @@ export default function Books() {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
-        //On page load, get all books from API
-        getBooks().then((data) => {
-            const response = data.docs
-            setBooks(response);
-        }).catch((error) => {
-            console.log(error);
-        });
-     
+        function fetchData() {
+            getBooks()
+                .then((data) => {
+                    var booksArray = data.docs;
+
+                    return Promise.all(booksArray.map((book) => {
+                        return getBookChapters(book._id)
+                            .then((data) => {
+                                book.chapters = data.docs;
+                                return book;
+                            })
+                    }))
+                })
+                .then((books) => {
+                    setBooks(books);
+                })
+        }
+
+        fetchData();
     }, []);
 
     return (
         <div>
             <Header />
             {books.map(book => {
-                var x =JSON.parse(JSON.stringify(book));
+                var x = JSON.parse(JSON.stringify(books));
                 console.log(x);
 
                 return <div>
                     <h1>{book.name}</h1>
+                    {book.chapters.map((chapter) => {
+                        return <p>{chapter.chapterName}</p>
+                    })}
                 </div>
             })}
         </div>
