@@ -22,12 +22,6 @@ export default function Movies() {
                 <h1 className="title">Movies</h1>
                 <div className="movies">
                     {movies.map((movie) => {
-                        /*
-                        "budgetInMillions": 93,
-      "boxOfficeRevenueInMillions": 871.5,
-      "academyAwardNominations": 13,
-      "academyAwardWins": 4,
-      "rottenTomatoesScore": 91 */
 
                         return (
                             <div className="movieContainer">
