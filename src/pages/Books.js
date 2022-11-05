@@ -39,17 +39,16 @@ export default function Books() {
             <div class="main">
                 <div className="title">Books and Chapters</div>
                 <div className="titleChapterContainer">
-                    <div class="titles">
-                        {books.map(book => {
-                            var x = JSON.parse(JSON.stringify(books));
-                            console.log(x);
+                    <div>
+                        <div class="titles">
+                            {books.map(book => {
+                                return <div class="titleContainer">
+                                    <h1>{book.name}</h1>
 
-                            return <div class="titleContainer">
-                                <h1>{book.name}</h1>
-
-                                <a href="#" onClick={() => setViewed(book)}>View Chapters</a>
-                            </div>
-                        })}
+                                    <button onClick={() => setViewed(book)}>View Chapters</button>
+                                </div>
+                            })}
+                        </div>
                     </div>
                     <div class="chaptersContainer">
 
@@ -60,6 +59,7 @@ export default function Books() {
                         </div>}
 
                     </div>
+
                 </div>
             </div>
         </div>
