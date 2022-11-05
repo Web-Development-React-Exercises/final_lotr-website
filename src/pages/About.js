@@ -11,7 +11,7 @@ export default function About() {
                 <div className="about">
                     <p>This is a fairly simple page I made to test The One API and also as my final assignment for my Web Development course.</p>
                     <p>The repository can be found at</p>
-                    <a href="">Github</a>
+                    <a href="https://github.com/Web-Development-React-Exercises/final_lotr-website">Github</a>
                     <p>Any inquiries about the page please send them to anibaldonoso1@gmail.com</p>
                 </div>
             </div>
