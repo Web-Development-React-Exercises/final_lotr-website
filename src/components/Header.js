@@ -10,9 +10,8 @@ export default function Header() {
                 <li class="headerLink"><Link to="/">Home</Link></li>
                 <li class="headerLink"><Link to="/books">Books</Link></li>
                 <li class="headerLink"><Link to="/movies">Movies</Link></li>
-                <li class="headerLink"><Link to="/characters">Characters</Link></li>
                 <li class="headerLink"><Link to="/quotes">Quotes</Link></li>
-                <li class="headerLink"><Link to="/chapters">Book Chapters</Link></li>          
+                <li class="headerLink"><Link to="/characters">Characters</Link></li>
                 <li class="headerLink"><Link to="/about">About</Link></li>
             </ul>
         </header>

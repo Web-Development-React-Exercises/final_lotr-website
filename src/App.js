@@ -6,7 +6,6 @@ import Books from './pages/Books';
 import Movies from './pages/Movies';
 import Characters from './pages/Characters';
 import Quotes from './pages/Quotes';
-import Chapters from './pages/Chapters';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 
@@ -16,9 +15,8 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/books" element={<Books />} />
       <Route path="/movies" element={<Movies />} />
-      <Route path="/characters" element={<Characters />} />
       <Route path="/quotes" element={<Quotes />} />
-      <Route path="/chapters" element={<Chapters />} />
+      <Route path="/characters" element={<Characters />} />
       <Route path="/about" element={<About />} />
       <Route path="/*" element={<NotFound />} />
     </Routes>
