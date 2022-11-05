@@ -37,26 +37,29 @@ export default function Books() {
 
             <Header />
             <div class="main">
-                <div class="titles">
-                    {books.map(book => {
-                        var x = JSON.parse(JSON.stringify(books));
-                        console.log(x);
+                <div className="title">Books and Chapters</div>
+                <div className="titleChapterContainer">
+                    <div class="titles">
+                        {books.map(book => {
+                            var x = JSON.parse(JSON.stringify(books));
+                            console.log(x);
 
-                        return <div class="titleContainer">
-                            <h1>{book.name}</h1>
+                            return <div class="titleContainer">
+                                <h1>{book.name}</h1>
 
-                            <a href="#" onClick={() => setViewed(book)}>View Chapters</a>
-                        </div>
-                    })}
-                </div>
-                <div class="chaptersContainer">
-
-                    {viewed && <div>
-                        {viewed.chapters.map(chapters => {
-                            return <p>{chapters.chapterName}</p>
+                                <a href="#" onClick={() => setViewed(book)}>View Chapters</a>
+                            </div>
                         })}
-                    </div>}
+                    </div>
+                    <div class="chaptersContainer">
 
+                        {viewed && <div>
+                            {viewed.chapters.map(chapters => {
+                                return <p>{chapters.chapterName}</p>
+                            })}
+                        </div>}
+
+                    </div>
                 </div>
             </div>
         </div>
