@@ -8,6 +8,7 @@ import getBookChapters from '../functions/getBookChapters';
 
 export default function Books() {
     const [books, setBooks] = useState([]);
+    const [viewed, setViewed] = useState(false);
 
     useEffect(() => {
         function fetchData() {
@@ -33,18 +34,32 @@ export default function Books() {
 
     return (
         <div>
-            <Header />
-            {books.map(book => {
-                var x = JSON.parse(JSON.stringify(books));
-                console.log(x);
 
-                return <div>
-                    <h1>{book.name}</h1>
-                    {book.chapters.map((chapter) => {
-                        return <p>{chapter.chapterName}</p>
+            <Header />
+            <div class="main">
+                <div class="titles">
+                    {books.map(book => {
+                        var x = JSON.parse(JSON.stringify(books));
+                        console.log(x);
+
+                        return <div class="titleContainer">
+                            <h1>{book.name}</h1>
+
+                            <a href="#" onClick={() => setViewed(book)}>View Chapters</a>
+                        </div>
                     })}
                 </div>
-            })}
+                <div class="chaptersContainer">
+
+                    {viewed && <div>
+                        {viewed.chapters.map(chapters => {
+                            return <p>{chapters.chapterName}</p>
+                        })}
+                    </div>}
+
+                </div>
+            </div>
         </div>
     );
 }
+

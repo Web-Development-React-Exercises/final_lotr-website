@@ -76,3 +76,44 @@ header > * {
 .headerLink a:hover {
   text-decoration: underline;
 }
+
+.main {
+  display: flex;
+  flex-direction: row;
+  margin: 5vh 5vw;
+}
+
+.titles {
+  display: inline-block;
+  flex-direction: column;
+  max-height: 100%;
+
+}
+
+.titleContainer {
+  background-color: var(--primary-background-color);
+  display: flex;
+  flex-direction: row;
+  width: 50vw;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 2vw;
+  color: var(--primary-text-color);
+  border: 3px solid var(--divider-color);
+}
+
+.chaptersContainer {
+
+  background-color: var(--primary-background-color);
+  border: 3px solid var(--divider-color);
+  width: 30vw;
+  padding: 2vw;
+  color: var(--primary-text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 0 20px;
+}
